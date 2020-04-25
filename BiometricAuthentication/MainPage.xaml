@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="BiometricAuthentication.MainPage"
+    BackgroundColor="LightGray"
+    x:Name="contentPage">
+    <StackLayout>
+            <Label x:Name="lbl" Text="Place your finger print"
+                   TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+
+
+            <StackLayout x:Name="fingerprintDroid">
+                <StackLayout.IsVisible>
+                    <OnPlatform x:TypeArguments="x:Boolean">
+                        <OnPlatform.iOS>false</OnPlatform.iOS>
+                        <OnPlatform.Android>true</OnPlatform.Android>
+                    </OnPlatform>
+                </StackLayout.IsVisible>
+                <Image Source="Touchlogo"></Image>
+                <!--" Label Text="Please place your fingertip on the scanner to verify your identity"></-->
+            </StackLayout>
+           
+        </StackLayout>
+</ContentPage>
