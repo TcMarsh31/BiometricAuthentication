@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Android;
 using Android.App;
 using Android.Content;
+using Android.Hardware.Biometrics;
 using Android.OS;
 using Android.Security.Keystore;
 using Android.Support.V4.App;
